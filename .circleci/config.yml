@@ -12,6 +12,12 @@ jobs:
       - image: circleci/php:7.1.13-apache-node-browsers
     steps:
       - run:
+          name: Check current directory
+          command: pwd
+      - run:
+          name: Display dir content
+          command: ls
+      - run:
           name: Run setup script
           command: bash .circleci/setup-heroku.sh
       - add_ssh_keys:
