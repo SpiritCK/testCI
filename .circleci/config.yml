@@ -13,6 +13,7 @@ jobs:
       - image: circleci/php:7.1.13-apache-node-browsers
     working_directory: /tmp/my-project  
     steps:
+      - checkout
       - run:
           name: Run setup script
           command: bash .circleci/setup-heroku.sh
