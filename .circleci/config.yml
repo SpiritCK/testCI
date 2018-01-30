@@ -1,4 +1,4 @@
-version: 1
+version: 2
 jobs:
   build:
     docker:
@@ -6,3 +6,4 @@ jobs:
     steps:
       - checkout
       - run: echo "A first hello"
+      - run: php index.php
