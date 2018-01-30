@@ -15,7 +15,10 @@ jobs:
     steps:
       - run:
           name: Run setup script
-          command: bash .circleci/setup-heroku.sh
+          command: |
+            pwd
+            ls
+            bash .circleci/setup-heroku.sh
       - add_ssh_keys:
           fingerprints:
             - "06:a9:53:05:16:b5:c3:28:dc:aa:8b:07:3f:3b:6f:16"
