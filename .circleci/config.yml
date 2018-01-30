@@ -10,7 +10,7 @@ jobs:
             
   deploy-job:
     docker:
-      - image: my-image
+      - image: circleci/php:7.1.13-apache-node-browsers
     working_directory: /tmp/my-project  
     steps:
       - run:
